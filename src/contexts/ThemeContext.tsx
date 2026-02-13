@@ -1,4 +1,5 @@
-import { createContext, useContext, useState, useEffect } from 'react';
+/* eslint-disable react-refresh/only-export-components */
+import { createContext, useContext, useState, useEffect, useCallback } from 'react';
 import type { ReactNode } from 'react';
 import type { Theme, ThemeContextType } from '../types/theme';
 import { account } from '../config/appwrite';
@@ -28,18 +29,7 @@ export const ThemeProvider = ({ children }: ThemeProviderProps) => {
     return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
   });
 
-  useEffect(() => {
-    // Apply theme to document
-    document.documentElement.setAttribute('data-theme', theme);
-    
-    // Save to localStorage
-    localStorage.setItem('mmg-theme', theme);
-    
-    // Try to sync to Appwrite preferences (non-blocking)
-    syncToAppwrite(theme);
-  }, [theme]);
-
-  const syncToAppwrite = async (newTheme: Theme) => {
+  const syncToAppwrite = useCallback(async (newTheme: Theme) => {
     try {
       const user = await account.get();
       if (user) {
@@ -49,7 +39,18 @@ export const ThemeProvider = ({ children }: ThemeProviderProps) => {
       // User not logged in or Appwrite not configured - that's okay
       console.log('Theme sync to Appwrite skipped:', error);
     }
-  };
+  }, []);
+
+  useEffect(() => {
+    // Apply theme to document
+    document.documentElement.setAttribute('data-theme', theme);
+    
+    // Save to localStorage
+    localStorage.setItem('mmg-theme', theme);
+    
+    // Try to sync to Appwrite preferences (non-blocking)
+    syncToAppwrite(theme);
+  }, [theme, syncToAppwrite]);
 
   const toggleTheme = () => {
     setThemeState((prevTheme) => (prevTheme === 'light' ? 'dark' : 'light'));
