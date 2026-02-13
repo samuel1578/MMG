@@ -1,0 +1,111 @@
+.impact {
+  min-height: 100vh;
+}
+
+.impact-hero {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+[data-theme='dark'] .impact-hero {
+  background: linear-gradient(135deg, #4c5fd7 0%, #5a3a7d 100%);
+}
+
+.impact-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.impact-hero p {
+  font-size: 1.5rem;
+  opacity: 0.95;
+}
+
+.impact-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+.impact-content h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: #2d3748;
+}
+
+[data-theme='dark'] .impact-content h2 {
+  color: #f7fafc;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.stat-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.stat-value {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #667eea;
+  margin-bottom: 0.5rem;
+}
+
+[data-theme='dark'] .stat-value {
+  color: #a0aec0;
+}
+
+.stat-label {
+  font-size: 1.125rem;
+  color: #4a5568;
+}
+
+[data-theme='dark'] .stat-label {
+  color: #cbd5e0;
+}
+
+.impact-description {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.impact-description p {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: #4a5568;
+}
+
+[data-theme='dark'] .impact-description p {
+  color: #cbd5e0;
+}
+
+@media (max-width: 768px) {
+  .impact-hero {
+    padding: 3rem 1rem;
+  }
+
+  .impact-hero h1 {
+    font-size: 2rem;
+  }
+
+  .impact-content {
+    padding: 3rem 1rem;
+  }
+
+  .impact-content h2 {
+    font-size: 2rem;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+}
