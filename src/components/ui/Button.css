@@ -1,0 +1,71 @@
+.btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.btn-small {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+}
+
+.btn-large {
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.btn-primary:hover {
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+.btn-secondary {
+  background: #f7fafc;
+  color: #2d3748;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme='dark'] .btn-secondary {
+  background: #2d3748;
+  color: #f7fafc;
+}
+
+.btn-secondary:hover {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.btn-outline {
+  background: transparent;
+  color: #667eea;
+  border: 2px solid #667eea;
+}
+
+[data-theme='dark'] .btn-outline {
+  color: #a0aec0;
+  border-color: #a0aec0;
+}
+
+.btn-outline:hover {
+  background: #667eea;
+  color: white;
+}
+
+[data-theme='dark'] .btn-outline:hover {
+  background: #a0aec0;
+  color: #1a202c;
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

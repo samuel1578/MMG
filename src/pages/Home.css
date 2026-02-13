@@ -1,0 +1,153 @@
+.home {
+  min-height: 100vh;
+}
+
+.hero {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  text-align: center;
+}
+
+[data-theme='dark'] .hero {
+  background: linear-gradient(135deg, #4c5fd7 0%, #5a3a7d 100%);
+}
+
+.hero-content {
+  max-width: 800px;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #ffd89b 0%, #19547b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+  opacity: 0.95;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.features {
+  padding: 5rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.features h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: #2d3748;
+}
+
+[data-theme='dark'] .features h2 {
+  color: #f7fafc;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.feature-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.cta-section {
+  padding: 5rem 2rem;
+  background: #f7fafc;
+  text-align: center;
+}
+
+[data-theme='dark'] .cta-section {
+  background: #1a202c;
+}
+
+.cta-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.cta-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #2d3748;
+}
+
+[data-theme='dark'] .cta-content h2 {
+  color: #f7fafc;
+}
+
+.cta-content p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  color: #4a5568;
+}
+
+[data-theme='dark'] .cta-content p {
+  color: #cbd5e0;
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1.125rem;
+  }
+
+  .features {
+    padding: 3rem 1rem;
+  }
+
+  .features h2 {
+    font-size: 2rem;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .cta-section {
+    padding: 3rem 1rem;
+  }
+
+  .cta-content h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+}

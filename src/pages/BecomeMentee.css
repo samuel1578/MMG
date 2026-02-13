@@ -1,0 +1,89 @@
+.become-mentee {
+  min-height: 100vh;
+}
+
+.mentee-hero {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+[data-theme='dark'] .mentee-hero {
+  background: linear-gradient(135deg, #4c5fd7 0%, #5a3a7d 100%);
+}
+
+.mentee-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.mentee-hero p {
+  font-size: 1.5rem;
+  opacity: 0.95;
+}
+
+.mentee-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+.mentee-info h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #2d3748;
+}
+
+[data-theme='dark'] .mentee-info h2 {
+  color: #f7fafc;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.benefit-icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.benefits-grid p {
+  text-align: center;
+  font-weight: 500;
+}
+
+.mentee-form-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.mentee-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .mentee-hero {
+    padding: 3rem 1rem;
+  }
+
+  .mentee-hero h1 {
+    font-size: 2rem;
+  }
+
+  .mentee-content {
+    padding: 3rem 1rem;
+  }
+
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+}
